@@ -5,10 +5,10 @@ const C = {
   logo: "images/logo.png",                // ヘッダーのロゴ（TOP・ブログと同じ画像）
   home: "https://0t0784.github.io/home/", // TOPページのURL（ロゴとメニューの行き先）
   menu: [                                  // [名前, 行き先]。「#」で始まるものは TOP の同じ場所へ。行き先が空なら出ない
-    ["私について", "#about"],
-    ["作品・活動", "#works"],
-    ["雑記", ""],                          // ← ブログのURLを入れると出る（例 "https://0t0784.github.io/ブログのリポジトリ名/"）
-    ["リンク", "#links"],
+    ["私について", "https://0t0784.github.io/home/#about"],
+    ["作品・活動", "https://0t0784.github.io/home/#works"],
+    ["雑記", "https://0t0784.github.io/blog/"],                          // ← ブログのURLを入れると出る（例 "https://0t0784.github.io/ブログのリポジトリ名/"）
+    ["リンク", "https://0t0784.github.io/home/#links"],
     ["お問い合わせ", "index.html"]
   ],
 
