@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=76a44674">
+</head>
+<body>
+<div class="leaves" id="leaves" aria-hidden="true"></div>
+<header><nav class="nav" id="nav" aria-label="メニュー"></nav></header>
+<main>
+  <section><div class="wrap">
+    <h2 class="sec" data-en="Contact" id="ttl">お問い合わせ</h2>
+    <p class="lead" id="lead"></p>
+    <div class="paper" id="card">
+      <p class="demo" id="demo" hidden>※ 送信先（Googleフォーム）がまだ設定されていないため、いまは送信されません（config.js を設定してください）。</p>
+      <form id="form" novalidate>
+        <div class="fld"><label for="f-name">お名前 <em>必須</em></label>
+          <input id="f-name" name="name" type="text" maxlength="60" autocomplete="name"><p class="err" role="alert"></p></div>
+        <div class="fld"><label for="f-email">メールアドレス <em>必須</em></label>
+          <input id="f-email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email"><p class="err" role="alert"></p></div>
+        <div class="fld" id="catBox"><label for="f-cat">種類</label>
+          <select id="f-cat" name="category"></select></div>
+        <div class="fld"><label for="f-msg">メッセージ <em>必須</em></label>
+          <textarea id="f-msg" name="message" rows="8" maxlength="2000"></textarea>
+          <p class="cnt"><span id="cnt">0</span> / 2000</p><p class="err" role="alert"></p></div>
+        <div class="hp" aria-hidden="true"><label>ウェブサイト <input id="f-hp" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <div class="fld agree"><label class="chk"><input id="f-agree" type="checkbox"><span id="agreeTxt"></span></label><p class="err" role="alert"></p></div>
+        <p class="gerr" id="gerr" role="alert" hidden></p>
+        <p class="send"><button class="btn" id="send" type="submit">送信する</button></p>
+      </form>
+      <div class="thanks" id="thanks" hidden>
+        <p class="tk" id="tk"></p>
+        <p class="tkb"><a class="btn sub" id="again" href="#">もう一度送る</a><a class="btn" id="toHome" href="index.html">TOPへ戻る</a></p>
+      </div>
+    </div>
+    <ul class="notes" id="notes"></ul>
+  </div></section>
+</main>
+<footer id="foot"></footer>
+<script src="config.js?v=79422c9a"></script>
+<script src="main.js?v=a5c3997d"></script>
+</body>
+</html>

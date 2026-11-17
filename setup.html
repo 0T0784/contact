@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Googleフォームの設定ヘルパー</title>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=76a44674">
+<style>
+.st ol{line-height:2;padding-left:1.4em}.st code{padding:1px 6px;background:#f6e9cd;border-radius:3px;font-size:.92em}
+.st textarea{width:100%;box-sizing:border-box;min-height:7em;padding:10px 12px;font:inherit;font-size:.9rem;border:1px solid var(--gilt);border-radius:4px;background:#fffdf7}
+.st pre{margin:12px 0;padding:14px 16px;overflow:auto;font-size:.88rem;line-height:1.7;background:#2b1a12;color:#fdf6e6;border-radius:6px;white-space:pre}
+.st .ok{color:#2d6a3e}.st .ng{color:var(--maple)}
+</style>
+</head>
+<body>
+<main><section><div class="wrap st">
+  <h2 class="sec" data-en="Setup" style="margin-bottom:1.6em">Googleフォームの設定</h2>
+  <div class="paper">
+    <ol>
+      <li>Googleフォームを作り、質問を4つ作る（すべて「記述式」がおすすめ）：お名前／メールアドレス／種類／メッセージ（メッセージは「段落」）</li>
+      <li>フォームの設定で、<b>「メールアドレスを収集」と「回答を1回に制限」をオフ</b>にする（オンだとログインが必要になり、送れません）</li>
+      <li>右上の <code>︙</code> →「事前入力したURLを取得」を開き、各質問に <b>次の文字</b>を入力する<br>
+        お名前 → <code>name</code>　メールアドレス → <code>email</code>　種類 → <code>category</code>　メッセージ → <code>message</code></li>
+      <li>「リンクを取得」→「リンクをコピー」して、下に貼る</li>
+    </ol>
+    <textarea id="u" placeholder="https://docs.google.com/forms/d/e/…/viewform?usp=pp_url&entry.123=name&entry.456=email…"></textarea>
+    <p id="res"></p>
+    <pre id="out" hidden></pre>
+    <p><button class="btn" id="copy" type="button" hidden>コピーする</button></p>
+    <p style="font-size:.88rem;color:var(--sub)">できた文字を、config.js の <code>form</code> の部分に貼り付けてください。設定が終わったら、このページ（setup.html / setup.js）は消して構いません。</p>
+  </div>
+</div></section></main>
+<script src="setup.js?v=9d960030"></script>
+</body>
+</html>
